@@ -14,9 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// MongoDB connection via mongoose
 const mongoose = require("mongoose");
-
 const mongodbUri = process.env.DB;
 
 mongoose.connect(mongodbUri, { useNewUrlParser: true, useUnifiedTopology: true })
