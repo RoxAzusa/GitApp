@@ -1,38 +1,36 @@
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-
 
 function AddAnime() {
   return (
-    <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Titre</Form.Label>
-        <Form.Control type="text" placeholder="Titre" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Année de diffusion</Form.Label>
-        <Form.Control type="text" placeholder="Année de diffusion" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Nombre d'épisodes</Form.Label>
-        <Form.Control type="text" placeholder="Nombre d'épisodes" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Genre</Form.Label>
-        <Form.Control type="text" placeholder="Genre" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Description</Form.Label>
-        <Form.Control type="text" placeholder="Description" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Image</Form.Label>
-        <Form.Control type="text" placeholder="Image" />
-      </Form.Group>
+    <section>
+      <div className="group-form" >
+        <label className="form-label">Titre</label>
+        <input type="text" placeholder="Titre" className="form-input"/>
+      </div>
+      <div className="group-form">
+        <label className="form-label">Année de diffusion</label>
+        <input type="text" placeholder="Année de diffusion" className="form-input"/>
+      </div>
+      <div className="group-form" >
+        <label className="form-label">Nombre d'épisodes</label>
+        <input type="text" placeholder="Nombre d'épisodes" className="form-input"/>
+      </div>
+      <div className="group-form" >
+        <label className="form-label">Genre</label>
+        <input type="text" placeholder="Genre" className="form-input"/>
+      </div>
+      <div className="group-form" >
+        <label className="form-label">Description</label>
+        <input type="text" placeholder="Description" className="form-input"/>
+      </div>
+      <div className="group-form" >
+        <label className="form-label">Image</label>
+        <input type="text" placeholder="Image" className="form-input"/>
+      </div>
       <Button variant="primary" type="submit">
         Submit
       </Button>
-    </Form>
+    </section>
   );
 }
 
