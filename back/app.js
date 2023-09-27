@@ -18,23 +18,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 // MongoDB connection via mongoose
 const mongoose = require("mongoose");
 
-class Database {
-  constructor() {
-    this._connect();
-  }
-  _connect() {
-    mongoose
-      .connect(process.env.DB)
-      .then(() => {
-        console.log('Database connection successful');
-      })
-      .catch((err) => {
-        console.error('Database connection failed');
-      });
-  }
-}
+const mongodbUri = process.env.DB;
 
-module.exports = new Database();
+mongoose.connect(mongodbUri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log("Connexion à MongoDB réussie !");
+  })
+  .catch((err) => {
+    console.error("Erreur de connexion à MongoDB : ", err);
+  });
 
 app.use('/', indexRouter);
 app.use('/animes', animesRouter);
