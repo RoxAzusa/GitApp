@@ -27,6 +27,6 @@ mongoose.connect(mongodbUri, { useNewUrlParser: true, useUnifiedTopology: true }
     console.error("Erreur de connexion à MongoDB : ", err);
   });
 
-app.use('/', indexRouter);
+app.use('/animes', indexRouter);
 
 module.exports = app;

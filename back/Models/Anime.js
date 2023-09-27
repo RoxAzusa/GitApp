@@ -13,7 +13,7 @@ const DataSchema = new mongoose.Schema({
     nbEpisodes: {
         type: String,
     },
-    decription: {
+    description: {
         type: String,
     },
     gender: {
