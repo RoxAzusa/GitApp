@@ -17,24 +17,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // MongoDB connection via mongoose
 const mongoose = require("mongoose");
-
-class Database {
-  constructor() {
-    this._connect();
-  }
-  _connect() {
-    mongoose
-      .connect(process.env.DB)
-      .then(() => {
-        console.log('Database connection successful');
-      })
-      .catch((err) => {
-        console.error('Database connection failed');
-      });
-  }
-}
-
-module.exports = new Database();
+mongoose.connect(
+    process.env.DB, 
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }
+);
 
 app.use('/', indexRouter);
 app.use('/animes', animesRouter);
