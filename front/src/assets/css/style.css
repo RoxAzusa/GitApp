@@ -1,6 +1,7 @@
 .nav {
     display: flex;
     flex-direction: row;
+    background-color: rgb(238, 216, 255);
 }
 
 .nav-item {
@@ -12,9 +13,9 @@
 
 .nav-button {
     list-style-type: none;
-    
 }
 
 .nav-link {
     text-decoration: none;
+    color: black;
 }
