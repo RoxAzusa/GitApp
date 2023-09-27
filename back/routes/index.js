@@ -5,8 +5,8 @@ const Anime = require("../Models/Anime");
 /* GET all animes */
 router.get('/', (req, res, next) => {
   Anime.find()
-    .then(newSauces => 
-      res.status(200).json(newSauces))
+    .then(newAnimes => 
+      res.status(200).json(newAnimes))
     .catch(error => 
       res.status(400).json({ error }));
 });
