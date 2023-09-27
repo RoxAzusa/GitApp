@@ -5,7 +5,6 @@ var logger = require('morgan');
 require('dotenv').config();
 
 var indexRouter = require('./routes/index');
-var animesRouter = require('./routes/animes');
 
 var app = express();
 
@@ -22,13 +21,12 @@ const mongodbUri = process.env.DB;
 
 mongoose.connect(mongodbUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
-    console.log("Connexion à MongoDB réussie !");
+    console.log("Success connection !");
   })
   .catch((err) => {
     console.error("Erreur de connexion à MongoDB : ", err);
   });
 
 app.use('/', indexRouter);
-app.use('/animes', animesRouter);
 
 module.exports = app;
