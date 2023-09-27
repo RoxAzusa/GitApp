@@ -5,7 +5,6 @@ var logger = require('morgan');
 require('dotenv').config();
 
 var indexRouter = require('./routes/index');
-var animesRouter = require('./routes/animes');
 
 var app = express();
 
@@ -17,15 +16,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // MongoDB connection via mongoose
 const mongoose = require("mongoose");
-mongoose.connect(
-    process.env.DB, 
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }
-);
+
+const mongodbUri = process.env.DB;
+
+mongoose.connect(mongodbUri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log("Success connection !");
+  })
+  .catch((err) => {
+    console.error("Erreur de connexion à MongoDB : ", err);
+  });
 
 app.use('/', indexRouter);
-app.use('/animes', animesRouter);
 
 module.exports = app;
