@@ -8,3 +8,28 @@ ul {
     display: flex;
     flex-direction: row;
 }
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    margin-top: 30px;
+}
+
+.select-form {
+    margin-top: 4vh;
+    padding: 16.5px 14px 16.5px 14px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.87);
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-color: rgb(184 184 184);
+}
+
+.select-form:focus {
+    border: #1676d2 solid 2px;
+}
