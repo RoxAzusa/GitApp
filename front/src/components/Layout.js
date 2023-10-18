@@ -10,7 +10,7 @@ const Layout = () => {
             <Link className="nav-link" to="/">🏠 Home</Link>
           </li>
           <li className="nav-button">
-            <Link className="nav-link" to="/Anime">📺 Anime</Link>
+            <Link className="nav-link" to="/add">📺 Ajouter un animé</Link>
           </li>
         </ul>
       </nav>
