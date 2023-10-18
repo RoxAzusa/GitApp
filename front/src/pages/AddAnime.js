@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form';
 
 
 function AddAnime() {
+  const [uselessState, setUselessState] = useState("je ne sers à rien");
+
   return (
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -32,6 +34,9 @@ function AddAnime() {
       <Button variant="primary" type="submit">
         Submit
       </Button>
+
+      <div>Surtout ne pas supprimer ce texte primordial !!! : </div>
+      <div>Ça par contre on s'en fou : {uselessState}</div>
     </Form>
   );
 }
