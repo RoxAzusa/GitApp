@@ -4,13 +4,13 @@ import '../assets/css/style.css';
 const Layout = () => {
   return (
     <>    
-      <nav className="">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
+      <nav className="nav">
+        <ul className="nav-item">
+          <li className="nav-button">
+            <Link className="nav-link" to="/">🏠 Home</Link>
           </li>
-          <li>
-            <Link to="/Anime">Anime</Link>
+          <li className="nav-button">
+            <Link className="nav-link" to="/Anime">📺 Anime</Link>
           </li>
         </ul>
       </nav>

@@ -141,6 +141,7 @@ function AddAnime() {
 
               
     </section>
+
   );
 }
 

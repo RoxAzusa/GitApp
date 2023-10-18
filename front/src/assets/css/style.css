@@ -1,10 +1,10 @@
 .nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    background-color: rgb(238, 216, 255);
 }
 
-ul {
+.nav-item {
     display: flex;
     flex-direction: row;
 }
@@ -32,4 +32,13 @@ ul {
 
 .select-form:focus {
     border: #1676d2 solid 2px;
+}
+
+.nav-button {
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
 }
