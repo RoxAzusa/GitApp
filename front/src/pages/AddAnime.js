@@ -15,7 +15,6 @@ const defaultValues = {
     image: ""
 };
 
-
 function AddAnime() {
     const [ anime, setAnime ] = useState('');
     const [inputs, setInputs] = useState(defaultValues);
